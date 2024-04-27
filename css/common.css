@@ -27,7 +27,6 @@ header {
     background-size: cover;
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     color: #F1EEDC;
 }
@@ -36,4 +35,16 @@ h1 {
     font-weight: 400;
     line-height: 5pc;
     letter-spacing: 5px;
+}
+.img-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow:hidden;
+    background-color: beige;
+    margin: 0 20px;
+}
+.img-container img{
+    object-fit: cover;
+    width: 100%;
 }
