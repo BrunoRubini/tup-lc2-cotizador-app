@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Informes</title>
+    <title>Informes - BullCoin</title>
     <script
       src="https://kit.fontawesome.com/2f8ba933a8.js"
       crossorigin="anonymous"
@@ -14,70 +14,44 @@
   </head>
   <body>
     <header>
-      <div class="img-background">
-        <div class="img-container">
-          <img src="img/logo-2.jpg" alt="Logo web" />
+      <div id="menu">
+        <div class="icono-container">
+          <a href="index.html"><img src="img/logo-2.jpg" alt="" /></a>
         </div>
-        <div class="title"><h1>Cotizador de Monedas</h1></div>
+        <ul>
+          <li>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+          </li>
+          <li>
+            <a href="Miarchivo.html"
+              ><i class="fa-solid fa-folder-open"></i> Mi Archivo</a
+            >
+          </li>
+          <li>
+            <a href="informes.html"><i class="fa-solid fa-file"></i> Informes</a>
+          </li>
+          <li>
+            <a href="contacto.html"><i class="fa-solid fa-address-book"></i> Contáctenos</a>
+          </li>
+        </ul>
       </div>
+      <!-- <button class="btn-mnu" onclick="eventoMenu()" id="btnMnu">≡</button> -->
     </header>
     <div class="page-container">
-      <aside>
-        <div class="sidebar">
-          <div class="menu-container">
-            <ul class="menu">
-              <li class="menu-item">
-                <div>
-                  <a href="index.html"
-                    ><i class="fa-solid fa-house"></i> Inicio</a
-                  >
-                </div>
-              </li>
-              <li class="menu-item">
-                <div>
-                  <a href="Miarchivo.html"
-                    ><i class="fa-solid fa-folder-open"></i>Mi Archivo</a
-                  >
-                </div>
-              </li>
-              <li class="menu-item">
-                <div>
-                  <a href="informes.html"
-                    ><i class="fa-solid fa-file"></i>Informes</a
-                  >
-                </div>
-              </li>
-              <li class="menu-item">
-                <div>
-                  <a href="contacto.html"
-                    ><i class="fa-solid fa-address-book"></i>Contáctenos</a
-                  >
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="comentarios-container">
-            <div class="comentario">
-              <div class="comentario-img">
-                <img src="img/logo-1.jpg" alt="Imagen de Usuario" />
-              </div>
-              <div class="comentario-content">
-                <h4>Nombre Usuario</h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                  blanditiis maiores perferen
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </aside>
       <main>
         <div class="main">
+          <section class="img-background-section">
+            <div class="img-background">
+              <div class="img-container">
+                <img src="img/logo-2.jpg" alt="Logo web" />
+              </div>
+              <div class="title"><h1>BullCoin</h1></div>
+            </div>
+          </section>
           <section class="bread-crumb-section">
             <nav class="bread-crumb-container">
               <ol class="bread-crumb">
-                <li class="bread-crumb-item-active" aria-current="page">
+                <li aria-current="page">
                   Inicio
                 </li>
                 <li class="bread-crumb-item-active" aria-current="page">
@@ -89,29 +63,18 @@
           <section class="informes-section">
             <div class="tablero-cotizaciones">
               <div class="grafico-selector">
-                <div class="selector-moneda">
-                  <label for="moneda">Seleccione una moneda:</label>
-                  <div class="icono-selector">
-                    <select id="moneda">
-                      <option value="dolar-oficial">Dólar Oficial</option>
-                      <option value="dolar-blue">Dólar Blue</option>
-                      <option value="dolar-mep">Dólar Bolsa (MEP)</option>
-                      <option value="dolar-ccl">
-                        Dólar Contado Con Liqui (CCL)
-                      </option>
-                      <option value="dolar-tarjeta">Dólar Tarjeta</option>
-                      <option value="dolar-mayorista">Dólar Mayorista</option>
-                      <option value="dolar-cripto">Dólar Cripto</option>
-                      <option value="euro">Euro</option>
-                      <option value="real">Real Brasileño</option>
-                      <option value="peso-chileno">Peso Chileno</option>
-                      <option value="peso-uruguayo">Peso Uruguayo</option>
-                    </select>
-                    <div class="filtrar-monedas">
-                      <button class="btn-filtrar">
-                        <i class="fa-solid fa-filter-circle-dollar"></i>
-                      </button>
+                <div class="selector-monedas-container">
+                  <div class="nombre-bandera">
+                    <div class="flag">
+                      <img src="img/eur.svg" alt="">
                     </div>
+                    <div class="nombre">Euro</div>
+                  </div>
+                  <input type="text" class="selector-moneda" value="Euro">
+                  <div class="selector-moneda-btn-container">
+                    <button class="btn-selector-moneda">
+                      <div class="icono-selector"><i class="fa-solid fa-chevron-down"></i></div>
+                    </button>
                   </div>
                 </div>
                 <div class="grafico-cotizacion">
@@ -139,8 +102,8 @@
                   </div>
                   <div class="informe-cotizaciones">
                     <div class="fila-tipo-moneda">
+                      <div class="flag-container"><img src="img/usd.svg" alt="bandera eeuu"></div>
                       <span>Dólar Blue</span>
-                      <div class="flag-container"><img src="img/icono-eeuu.jpg" alt="bandera eeuu"></div>
                     </div>
                     <div class="fila-datos">
                       <div></div>
@@ -195,7 +158,8 @@
                       </div>
                     </div>
                     <div class="fila-tipo-moneda">
-                      <span>Dólar Blue</span>
+                      <div class="flag-container"><img src="img/eur.svg" alt="bandera eeuu"></div>
+                      <span>Euro</span>
                     </div>
                     <div class="fila-datos">
                       <div></div>

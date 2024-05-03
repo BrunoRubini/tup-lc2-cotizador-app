@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Archivo</title>
+    <title>Mi Archivo - BullCoin</title>
     <script
       src="https://kit.fontawesome.com/2f8ba933a8.js"
       crossorigin="anonymous"
@@ -14,70 +14,45 @@
   </head>
   <body>
     <header>
-      <div class="img-background">
-        <div class="img-container">
-          <img src="img/logo-2.jpg" alt="Logo web" />
+      <div id="menu">
+        <div class="icono-container">
+          <a href="index.html"><img src="img/logo-2.jpg" alt="" /></a>
         </div>
-        <div class="title"><h1>Cotizador de Monedas</h1></div>
+        <ul>
+          <li>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+          </li>
+          <li>
+            <a href="Miarchivo.html"
+              ><i class="fa-solid fa-folder-open"></i> Mi Archivo</a
+            >
+          </li>
+          <li>
+            <a href="informes.html"><i class="fa-solid fa-file"></i> Informes</a>
+          </li>
+          <li>
+            <a href="contacto.html"><i class="fa-solid fa-address-book"></i> Contáctenos</a>
+          </li>
+        </ul>
       </div>
+      <!-- <button class="btn-mnu" onclick="eventoMenu()" id="btnMnu">≡</button> -->
     </header>
     <div class="page-container">
-      <aside>
-        <div class="sidebar">
-          <div class="menu-container">
-            <ul class="menu">
-              <li class="menu-item">
-                <div>
-                  <a href="index.html"
-                    ><i class="fa-solid fa-house"></i> Inicio</a
-                  >
-                </div>
-              </li>
-              <li class="menu-item">
-                <div>
-                  <a href="Miarchivo.html"
-                    ><i class="fa-solid fa-folder-open"></i>Mi Archivo</a
-                  >
-                </div>
-              </li>
-              <li class="menu-item">
-                <div>
-                  <a href="informes.html"
-                    ><i class="fa-solid fa-file"></i>Informes</a
-                  >
-                </div>
-              </li>
-              <li class="menu-item">
-                <div>
-                  <a href="contacto.html"
-                    ><i class="fa-solid fa-address-book"></i>Contáctenos</a
-                  >
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="comentarios-container">
-            <div class="comentario">
-              <div class="comentario-img">
-                <img src="img/logo-1.jpg" alt="Imagen de Usuario" />
-              </div>
-              <div class="comentario-content">
-                <h4>Nombre Usuario</h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                  blanditiis maiores perferen
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </aside>
+
       <main>
         <div class="main">
+          <section class="img-background-section">
+            <div class="img-background">
+              <div class="img-container">
+                <img src="img/logo-2.jpg" alt="Logo web" />
+              </div>
+              <div class="title"><h1>BullCoin</h1></div>
+            </div>
+          </section>
           <section class="bread-crumb-section">
             <nav class="bread-crumb-container">
               <ol class="bread-crumb">
-                <li class="bread-crumb-item-active" aria-current="page">
+                <li aria-current="page">
                   Inicio
                 </li>
                 <li class="bread-crumb-item-active" aria-current="page">
@@ -122,20 +97,24 @@
                           <p>Dólar (CCL)</p>
                         </li>
                         <li>
+                          <div class="flag-container"><img src="img/usd.svg" alt="bandera eeuu"></div>
                           <p>Dólar (CCL)</p>
-                          <div class="flag-container"><img src="img/icono-eeuu.jpg" alt="bandera eeuu"></div>
                         </li>
                         <li>
-                          <p>Peso Uruguayo</p>
-                        </li>
-                        <li>
-                          <p>Dólar Tarjeta</p>
-                        </li>
-                        <li>
-                          <p>Dólar Tarjeta</p>
-                        </li>
-                        <li>
+                          <div class="flag-container"><img src="img/usd.svg" alt="bandera eeuu"></div>
                           <p>Dólar (CCL)</p>
+                        </li>
+                        <li>
+                          <div class="flag-container"><img src="img/usd.svg" alt="bandera eeuu"></div>
+                          <p>Dólar (CCL)</p>
+                        </li>
+                        <li>
+                          <div class="flag-container"><img src="img/usd.svg" alt="bandera eeuu"></div>
+                          <p>Dólar (CCL)</p>
+                        </li>
+                        <li>
+                          <div class="flag-container"><img src="img/eur.svg" alt="bandera eeuu"></div>
+                          <p>Euro</p>
                         </li>
                       </ul>
                     </div>
