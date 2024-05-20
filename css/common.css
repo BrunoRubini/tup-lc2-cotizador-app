@@ -143,10 +143,11 @@ p {
   width: 100%;
   border-radius: 50%;
 }
-#BackgroundDinamico {
+/* #BackgroundDinamico { Esto no se aplica ya que hacemos el background dinamico en el JS
   transition: opacity 4s ease-in-out;
+  transition : 2s ease-in;   
   opacity: 1;
-}
+} */
 /*boton menu desplegable*/
 .btn-mnu {
   display: none;
