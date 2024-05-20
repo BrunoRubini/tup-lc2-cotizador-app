@@ -48,13 +48,13 @@ const imagenes = [                                                     // Arregl
     ];
 
 
-let indiceActual = 0;                                                    // Índice inicial para el arreglo de imágenes    
-const elementoFondo = document.getElementById("BackgroundDinamico");    // Elemento del DOM cuyo fondo se actualizará
+let indiceActual = 0;                                                     // Índice inicial para el arreglo de imágenes    
+const elementoFondo = document.getElementById("BackgroundDinamico");      // Elemento del DOM cuyo fondo se actualizará
 function actualizarFondo() {
     elementoFondo.style.opacity = "0";                                    //Establece la opacidad del fondo a 0 (transparente)
-    elementoFondo.style.backgroundImage = imagenes[indiceActual];    // Cambia la imagen de fondo
-    elementoFondo.style.transition = "opacity 4s ease-in-out";
-    elementoFondo.style.opacity = "1";                               // La hacemos totalmente visible
+    elementoFondo.style.backgroundImage = imagenes[indiceActual];         // Cambia la imagen de fondo
+    //elementoFondo.style.transition = "opacity 4s ease-in-out";
+    elementoFondo.style.opacity = "1";                                    // La hacemos totalmente visible
     elementoFondo.style.transition = "2s ease-in";                  
     
     setInterval(()=>{
@@ -66,3 +66,6 @@ function actualizarFondo() {
 }
 // Intervalo para cambiar automáticamente las imágenes
 setInterval(actualizarFondo, 4000);
+
+
+
