@@ -17,79 +17,7 @@
     />
   </head>
   <body>
-    <header>
-      <nav class="nav">
-        <div class="nav__container">
-          <div class="nav__title">
-            <a href="index.html">
-              <span>BULLCOIN</span>
-              <div class="icono-container">
-                <img src="img/bullCoinIcono.jpg" alt="" />
-              </div>
-            </a>
-          </div>
-          <a href="#menu" class="nav__menu">
-            <img src="img/menu.svg" class="nav__icon" alt="" />
-          </a>
-          <a href="#" class="nav__menu nav__menu--second">
-            <img src="img/close.svg" class="nav__icon" alt="" />
-          </a>
-          <ul class="dropdown" id="menu">
-            <li class="dropdown__list">
-              <a href="index.html" class="dropdown__link">
-                <img src="img/house.svg" class="dropdown__icon" alt="" />
-                <span class="dropdown__span">Inicio</span>
-              </a>
-            </li>
-            <li class="dropdown__list">
-              <a href="Miarchivo.html" class="dropdown__link">
-                <img src="img/projects.svg" class="dropdown__icon" alt="" />
-                <span class="dropdown__span">Mi Archivo</span>
-              </a>
-            </li>
-            <li class="dropdown__list">
-              <a href="informes.html" class="dropdown__link">
-                <img src="img/projects.svg" class="dropdown__icon" alt="" />
-                <span class="dropdown__span">Informes</span>
-              </a>
-            </li>
-            <li class="dropdown__list">
-              <a href="contacto.html" class="dropdown__link">
-                <img src="img/email.svg" class="dropdown__icon" alt="" />
-                <span class="dropdown__span">Contáctenos</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <!-- Esto lo comento porque lo vamos a usar despues cuando habilitemos el js -->
-      <!-- <div id="menu">
-        <div class="icono-container">
-          <a href="index.html"><img src="img/toroblanco2.jpg" alt="" /></a>
-        </div>
-        <ul>
-          <li>
-            <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-          </li>
-          <li>
-            <a href="Miarchivo.html"
-              ><i class="fa-solid fa-folder-open"></i> Mi Archivo</a
-            >
-          </li>
-          <li>
-            <a href="informes.html"
-              ><i class="fa-solid fa-file"></i> Informes</a
-            >
-          </li>
-          <li>
-            <a href="contacto.html"
-              ><i class="fa-solid fa-address-book"></i> Contáctenos</a
-            >
-          </li>
-        </ul>
-      </div>
-      <button class="btn-mnu" onclick="eventoMenu()" id="btnMnu">≡</button> -->
-    </header>
+    <header id="header"></header>
 
     <div class="page-container">
       <main>
@@ -117,239 +45,142 @@
                 <h2>PIZARRA DE COTIZACIONES</h2>
               </div>
               <div class="selector-monedas-container">
-                <div class="nombre-bandera">
+                <div class="nombre-bandera" id="nombre-bandera">
                   <div class="flag">
-                    <img src="img/eur.svg" alt="" />
+                    <img src="img/noun-world-2699516.svg" alt="" />
                   </div>
-                  <div class="nombre">Euro</div>
+                  <div class="nombre">Todas</div>
                 </div>
-                <select name="selector-moneda" id="selcetor-moneda">
-                  <option value="0">Seleccione una opción</option>
-                  <option value="todas">Todas</option>
-                  <option value="oficial">Dólar oficial</option>
-                  <option value="blue">Dólar Blue</option>
-                  <option value="mep">Dólar Bolsa (MEP)</option>
-                  <option value="liqui">Dólar Contado con Liqui (CCL)</option>
-                  <option value="tarjeta">Dólar Tarjeta</option>
-                  <option value="mayorista">Dólar Mayorista</option>
-                  <option value="cripto">Dólar Cripto</option>
-                  <option value="euro">Euro</option>
-                  <option value="real">Real Brasileño</option>
-                  <option value="chile">Peso Chileno</option>
-                  <option value="uyu">Peso Uruguayo</option>
-                </select>
-                <!-- esto lo dejo comentado porque despues lo vamos a usar con js -->
-                <!-- <input type="text" class="selector-moneda" value="Euro" />
+                <label for="">Seleccione una opción</label>
                 <div class="selector-moneda-btn-container">
-                  <button class="btn-selector-moneda">
+                  <button class="btn-selector-moneda" id="btn-selector-moneda">
                     <div class="icono-selector">
                       <i class="fa-solid fa-chevron-down"></i>
                     </div>
                   </button>
-                </div> -->
+                </div>
               </div>
-              <div class="fecha-hora">
-                <p>Datos Actualizados al <span>15/04/2024 17:30hs</span></p>
+              <div class="selector-container" id="selector-container">
+                <div class="selector-option-container" data-currency="0">
+                  <div class="selector-option">
+                    <div class="flag-img">
+                      <img src="img/noun-world-2699516.svg" alt="" />
+                    </div>
+                    <h4>Todas</h4>
+                  </div>
+                  <span><i class="fa-solid fa-check"></i></span>
+                </div>
+                <div class="selector-option-container" data-currency="1">
+                  <div class="selector-option">
+                    <div class="flag-img">
+                      <img src="img/usd.svg" alt="" />
+                    </div>
+                    <h4>Dólar Oficial</h4>
+                  </div>
+                  <span></span>
+                </div>
+                <div class="selector-option-container" data-currency="2">
+                  <div class="selector-option">
+                    <div class="flag-img">
+                      <img src="img/usd.svg" alt="" />
+                    </div>
+                    <h4>Dólar Blue</h4>
+                  </div>
+                  <span></span>
+                </div>
+                <div class="selector-option-container" data-currency="3">
+                  <div class="selector-option">
+                    <div class="flag-img">
+                      <img src="img/usd.svg" alt="" />
+                    </div>
+                    <h4>Dólar Bolsa</h4>
+                  </div>
+                  <span></span>
+                </div>
+                <div class="selector-option-container" data-currency="4">
+                  <div class="selector-option">
+                    <div class="flag-img">
+                      <img src="img/usd.svg" alt="" />
+                    </div>
+                    <h4>Dólar CCL</h4>
+                  </div>
+                  <span></span>
+                </div>
+
+                <div class="selector-option-container" data-currency="5">
+                  <div class="selector-option">
+                    <div class="flag-img">
+                      <img src="img/usd.svg" alt="" />
+                    </div>
+                    <h4>Dólar Mayorista</h4>
+                  </div>
+                  <span></span>
+                </div>
+                <div class="selector-option-container" data-currency="6">
+                  <div class="selector-option">
+                    <div class="flag-img">
+                      <img src="img/usd.svg" alt="" />
+                    </div>
+                    <h4>Dólar Cripto</h4>
+                  </div>
+                  <span></span>
+                </div>
+                <div class="selector-option-container" data-currency="7">
+                  <div class="selector-option">
+                    <div class="flag-img">
+                      <img src="img/usd.svg" alt="" />
+                    </div>
+                    <h4>Dólar Tarjeta</h4>
+                  </div>
+                  <span></span>
+                </div>
+                <div class="selector-option-container" data-currency="8">
+                  <div class="selector-option">
+                    <div class="flag-img">
+                      <img src="img/eur.svg" alt="" />
+                    </div>
+                    <h4>Eur</h4>
+                  </div>
+                  <span></span>
+                </div>
+                <div class="selector-option-container" data-currency="9">
+                  <div class="selector-option">
+                    <div class="flag-img">
+                      <img src="img/brl.svg" alt="" />
+                    </div>
+                    <h4>Real Brasileño</h4>
+                  </div>
+                  <span></span>
+                </div>
+                <div class="selector-option-container" data-currency="10">
+                  <div class="selector-option">
+                    <div class="flag-img">
+                      <img src="img/clp.svg" alt="" />
+                    </div>
+                    <h4>Peso Chileno</h4>
+                  </div>
+                  <span></span>
+                </div>
+                <div class="selector-option-container" data-currency="11">
+                  <div class="selector-option">
+                    <div class="flag-img">
+                      <img src="img/uyu.svg" alt="" />
+                    </div>
+                    <h4>Peso Uruguayo</h4>
+                  </div>
+                  <span></span>
+                </div>
+              </div>
+              <div class="fecha-hora" id="fecha-hora">
+                <p>Datos Actualizados al <span></span></p>
               </div>
 
-              <div class="monedas-container">
-                <div class="moneda-container">
-                  <div class="moneda-card">
-                    <div class="moneda-title">
-                      <div class="flag-container">
-                        <img src="img/usd.svg" alt="dolar" />
-                      </div>
-                      <h4>Dólar Blue</h4>
-                    </div>
-                    <div class="moneda-body">
-                      <div class="moneda-compra">
-                        <div class="compra">
-                          <h5>COMPRA</h5>
-                          <span>$1500</span>
-                        </div>
-                      </div>
-                      <div class="moneda-venta">
-                        <div class="venta">
-                          <h5>VENTA</h5>
-                          <span>$1700</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="moneda-footer">
-                      <div class="favoritos">
-                        <button class="btn-favorito">
-                          <!-- <i class="fa-solid fa-bookmark"></i> -->
-                          Guardar
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="moneda-container">
-                  <div class="moneda-card">
-                    <div class="moneda-title">
-                      <div class="flag-container">
-                        <img src="img/usd.svg" alt="dolar" />
-                      </div>
-                      <h4>Dólar Blue</h4>
-                    </div>
-                    <div class="moneda-body">
-                      <div class="moneda-compra">
-                        <div class="compra">
-                          <h5>COMPRA</h5>
-                          <span>$1500</span>
-                        </div>
-                      </div>
-                      <div class="moneda-venta">
-                        <div class="venta">
-                          <h5>VENTA</h5>
-                          <span>$1700</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="moneda-footer">
-                      <div class="favoritos">
-                        <button class="btn-favorito">
-                          <!-- <i class="fa-solid fa-bookmark"></i> -->
-                          Guardar
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="moneda-container">
-                  <div class="moneda-card">
-                    <div class="moneda-title">
-                      <div class="flag-container">
-                        <img src="img/eur.svg" alt="dolar" />
-                      </div>
-                      <h4>Euro</h4>
-                    </div>
-                    <div class="moneda-body">
-                      <div class="moneda-compra">
-                        <div class="compra">
-                          <h5>COMPRA</h5>
-                          <span>$1500</span>
-                        </div>
-                      </div>
-                      <div class="moneda-venta">
-                        <div class="venta">
-                          <h5>VENTA</h5>
-                          <span>$1700</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="moneda-footer">
-                      <div class="favoritos">
-                        <button class="btn-favorito">
-                          <!-- <i class="fa-solid fa-bookmark"></i> -->
-                          Guardar
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="moneda-container">
-                  <div class="moneda-card">
-                    <div class="moneda-title">
-                      <div class="flag-container">
-                        <img src="img/usd.svg" alt="dolar" />
-                      </div>
-                      <h4>Dólar Blue</h4>
-                    </div>
-                    <div class="moneda-body">
-                      <div class="moneda-compra">
-                        <div class="compra">
-                          <h5>COMPRA</h5>
-                          <span>$1500</span>
-                        </div>
-                      </div>
-                      <div class="moneda-venta">
-                        <div class="venta">
-                          <h5>VENTA</h5>
-                          <span>$1700</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="moneda-footer">
-                      <div class="favoritos">
-                        <button class="btn-favorito">
-                          <!-- <i class="fa-solid fa-bookmark"></i> -->
-                          Guardar
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="moneda-container">
-                  <div class="moneda-card">
-                    <div class="moneda-title">
-                      <div class="flag-container">
-                        <img src="img/eur.svg" alt="dolar" />
-                      </div>
-                      <h4>Euro</h4>
-                    </div>
-                    <div class="moneda-body">
-                      <div class="moneda-compra">
-                        <div class="compra">
-                          <h5>COMPRA</h5>
-                          <span>$1500</span>
-                        </div>
-                      </div>
-                      <div class="moneda-venta">
-                        <div class="venta">
-                          <h5>VENTA</h5>
-                          <span>$1700</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="moneda-footer">
-                      <div class="favoritos">
-                        <button class="btn-favorito">
-                          <!-- <i class="fa-solid fa-bookmark"></i> -->
-                          Guardar
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="moneda-container">
-                  <div class="moneda-card">
-                    <div class="moneda-title">
-                      <div class="flag-container">
-                        <img src="img/usd.svg" alt="dolar" />
-                      </div>
-                      <h4>Dólar Blue</h4>
-                    </div>
-                    <div class="moneda-body">
-                      <div class="moneda-compra">
-                        <div class="compra">
-                          <h5>COMPRA</h5>
-                          <span>$1500</span>
-                        </div>
-                      </div>
-                      <div class="moneda-venta">
-                        <div class="venta">
-                          <h5>VENTA</h5>
-                          <span>$1700</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="moneda-footer">
-                      <div class="favoritos">
-                        <button class="btn-favorito">
-                          <!-- <i class="fa-solid fa-bookmark"></i> -->
-                          Guardar
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="monedas-container" id="monedas-container">
               </div>
               <div class="aviso-favoritos">
                 <p>
-                  !Haga clic en el marcador para guardar los datos de la
-                  cotización en sus favoritos.
+                  !Haga clic en guardar para guardar los datos de la
+                  cotización en sus favoritos!
                 </p>
                 <p>
                   Datos obtenidos de
@@ -417,79 +248,8 @@
       </main>
     </div>
 
-    <footer>
-      <div class="footer-container">
-        <div class="institucional-container item-footer">
-          <h3>INSTITUCIONAL</h3>
-          <ul class="lista-institucional">
-            <li class="lista-institucional-item">
-              <a href="">¿Quiénes Somos?</a>
-            </li>
-            <li class="lista-institucional-item">
-              <a href="">Socios Estratégicos</a>
-            </li>
-            <li class="lista-institucional-item">
-              <a href="">Trabaje con Nosotros</a>
-            </li>
-            <li class="lista-institucional-item"><a href="">Ayuda</a></li>
-          </ul>
-        </div>
-        <div class="accesos-container item-footer">
-          <h3>ACCESOS</h3>
-          <ul class="lista-accesos">
-            <li class="lista-accesos-item"><a href="index.html">Inicio</a></li>
-            <li class="lista-accesos-item">
-              <a href="Miarchivo.html">Mi Archivo</a>
-            </li>
-            <li class="lista-accesos-item">
-              <a href="informes.html">Informes</a>
-            </li>
-            <li class="lista-accesos-item">
-              <a href="contacto.html">Contáctenos</a>
-            </li>
-          </ul>
-        </div>
-        <div class="contacto-container item-footer">
-          <h3>CONTACTO</h3>
-          <ul class="lista-contacto">
-            <li class="lista-contacto-item">
-              Universidad Tecnológica Nacional
-            </li>
-            <li class="lista-contacto-item">
-              ZEBALLOS 1341 - S2000BQA - ROSARIO
-            </li>
-            <li class="lista-contacto-item">0341 - 4481871</li>
-            <li class="lista-contacto-item">
-              <a href="contacto.html">!Escríbanos!</a>
-            </li>
-          </ul>
-        </div>
-        <div class="desarrollado-container item-footer">
-          <h3>DESARROLLADO POR</h3>
-          <ul class="lista-desarrollo">
-            <li class="lista-desarrollo-item">
-              <a href="https://github.com/JensonMedina" target="_blank"
-                >Jenson Medina (53338)</a
-              >
-            </li>
-            <li class="lista-desarrollo-item">
-              <a href="https://github.com/MateoRegis" target="_blank"
-                >Mateo Regis (48963)</a
-              >
-            </li>
-            <li class="lista-desarrollo-item">
-              <a href="https://github.com/BrunoRubini" target="_blank"
-                >Bruno Rubini(53367)</a
-              >
-            </li>
-            <li class="lista-desarrollo-item">TUP06 - 2024</li>
-          </ul>
-        </div>
-      </div>
-      <div class="nombre-materia">
-        <span>Tup - Cátedra de Laboratorio de Computación 2 - Año 2024</span>
-      </div>
-    </footer>
-    <!-- <script src="js/common.js"></script> -->
+    <footer id="footer"></footer>
+    <script src="js/common.js"></script>
+    <script src="js/pages/index.js"></script>
   </body>
 </html>

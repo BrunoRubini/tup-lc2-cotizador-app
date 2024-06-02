@@ -9,83 +9,11 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/pages/informes.css">
+    <link rel="stylesheet" href="css/pages/informes.css" />
     <link rel="shortcut icon" href="img/logo-1.jpg" type="image/x-icon" />
   </head>
   <body>
-    <header>
-      <nav class="nav">
-        <div class="nav__container">
-          <div class="nav__title">
-            <a href="index.html">
-              <span>BULLCOIN</span>
-              <div class="icono-container">
-                <img src="img/bullCoinIcono.jpg" alt="" />
-              </div>
-            </a>
-          </div>
-          <a href="#menu" class="nav__menu">
-            <img src="img/menu.svg" class="nav__icon" alt="" />
-          </a>        
-          <a href="#" class="nav__menu nav__menu--second">
-            <img src="img/close.svg" class="nav__icon" alt="" />
-          </a>
-          <ul class="dropdown" id="menu">
-            <li class="dropdown__list">
-              <a href="index.html" class="dropdown__link">
-                <img src="img/house.svg" class="dropdown__icon" alt="" />
-                <span class="dropdown__span">Inicio</span>
-              </a>
-            </li>
-            <li class="dropdown__list">
-              <a href="Miarchivo.html" class="dropdown__link">
-                <img src="img/projects.svg" class="dropdown__icon" alt="" />
-                <span class="dropdown__span">Mi Archivo</span>
-              </a>
-            </li>
-            <li class="dropdown__list">
-              <a href="informes.html" class="dropdown__link">
-                <img src="img/projects.svg" class="dropdown__icon" alt="" />
-                <span class="dropdown__span">Informes</span>
-              </a>
-            </li>
-            <li class="dropdown__list">
-              <a href="contacto.html" class="dropdown__link">
-                <img src="img/email.svg" class="dropdown__icon" alt="" />
-                <span class="dropdown__span">Contáctenos</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <!-- Esto lo comento porque lo vamos a usar despues cuando habilitemos el js -->
-      <!-- <div id="menu">
-        <div class="icono-container">
-          <a href="index.html"><img src="img/toroblanco2.jpg" alt="" /></a>
-        </div>
-        <ul>
-          <li>
-            <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-          </li>
-          <li>
-            <a href="Miarchivo.html"
-              ><i class="fa-solid fa-folder-open"></i> Mi Archivo</a
-            >
-          </li>
-          <li>
-            <a href="informes.html"
-              ><i class="fa-solid fa-file"></i> Informes</a
-            >
-          </li>
-          <li>
-            <a href="contacto.html"
-              ><i class="fa-solid fa-address-book"></i> Contáctenos</a
-            >
-          </li>
-        </ul>
-      </div>
-      <button class="btn-mnu" onclick="eventoMenu()" id="btnMnu">≡</button> -->
-    </header>
+    <header id="header"></header>
     <div class="page-container">
       <main>
         <div class="main">
@@ -100,9 +28,7 @@
           <section class="bread-crumb-section">
             <nav class="bread-crumb-container">
               <ol class="bread-crumb">
-                <li aria-current="page">
-                  Inicio
-                </li>
+                <li aria-current="page">Inicio</li>
                 <li class="bread-crumb-item-active" aria-current="page">
                   Informe
                 </li>
@@ -119,30 +45,18 @@
                     </div>
                     <div class="nombre">Euro</div>
                   </div>
-                  <select name="selector-moneda" id="selcetor-moneda">
-                    <option value="0">Seleccione una opción</option>
-                    <option value="todas">Todas</option>
-                    <option value="oficial">Dólar oficial</option>
-                    <option value="blue">Dólar Blue</option>
-                    <option value="mep">Dólar Bolsa (MEP)</option>
-                    <option value="liqui">Dólar Contado con Liqui (CCL)</option>
-                    <option value="tarjeta">Dólar Tarjeta</option>
-                    <option value="mayorista">Dólar Mayorista</option>
-                    <option value="cripto">Dólar Cripto</option>
-                    <option value="euro">Euro</option>
-                    <option value="real">Real Brasileño</option>
-                    <option value="chile">Peso Chileno</option>
-                    <option value="uyu">Peso Uruguayo</option>
-                  </select>
-                  <!-- esto lo dejo comentado porque despues lo vamos a usar con js -->
-                  <!-- <input type="text" class="selector-moneda" value="Euro" />
+                  <input type="text" class="selector-moneda" value="Euro" />
                   <div class="selector-moneda-btn-container">
-                    <button class="btn-selector-moneda">
+                    <button
+                      class="btn-selector-moneda"
+                      id="btn-selector-moneda"
+                    >
                       <div class="icono-selector">
                         <i class="fa-solid fa-chevron-down"></i>
                       </div>
                     </button>
-                  </div> -->
+                  </div>
+                  <div class="selector-container" id="selector-container"></div>
                 </div>
                 <div class="grafico-cotizacion">
                   <!-- Gráfico  -->
@@ -152,6 +66,7 @@
                   </div>
                 </div>
               </div>
+              
               <div class="compartir-info">
                 <a href="#">
                   <i class="fa-solid fa-envelope"></i> Compartir Información
@@ -169,7 +84,9 @@
                   </div>
                   <div class="informe-cotizaciones">
                     <div class="fila-tipo-moneda">
-                      <div class="flag-container"><img src="img/usd.svg" alt="bandera eeuu"></div>
+                      <div class="flag-container">
+                        <img src="img/usd.svg" alt="bandera eeuu" />
+                      </div>
                       <span>Dólar Blue</span>
                     </div>
                     <div class="fila-datos">
@@ -183,7 +100,7 @@
                           <li><p>15/04/2024</p></li>
                         </ul>
                       </div>
-  
+
                       <div class="compra columna-datos">
                         <ul>
                           <li><p>$1075</p></li>
@@ -193,7 +110,7 @@
                           <li><p>$1075</p></li>
                         </ul>
                       </div>
-  
+
                       <div class="venta columna-datos">
                         <ul>
                           <li><p>$1075</p></li>
@@ -203,14 +120,16 @@
                           <li><p>$1075</p></li>
                         </ul>
                       </div>
-  
+
                       <div class="accion columna-datos">
                         <ul>
                           <li>
                             <i class="fa-solid fa-arrow-up cambio-positivo"></i>
                           </li>
                           <li>
-                            <i class="fa-solid fa-arrow-down cambio-negativo"></i>
+                            <i
+                              class="fa-solid fa-arrow-down cambio-negativo"
+                            ></i>
                           </li>
                           <li>
                             <i class="fa-solid fa-arrow-up cambio-positivo"></i>
@@ -225,7 +144,9 @@
                       </div>
                     </div>
                     <div class="fila-tipo-moneda">
-                      <div class="flag-container"><img src="img/eur.svg" alt="bandera eeuu"></div>
+                      <div class="flag-container">
+                        <img src="img/eur.svg" alt="bandera eeuu" />
+                      </div>
                       <span>Euro</span>
                     </div>
                     <div class="fila-datos">
@@ -239,7 +160,7 @@
                           <li><p>15/04/2024</p></li>
                         </ul>
                       </div>
-  
+
                       <div class="compra columna-datos">
                         <ul>
                           <li><p>$1075</p></li>
@@ -249,7 +170,7 @@
                           <li><p>$1075</p></li>
                         </ul>
                       </div>
-  
+
                       <div class="venta columna-datos">
                         <ul>
                           <li><p>$1075</p></li>
@@ -259,7 +180,7 @@
                           <li><p>$1075</p></li>
                         </ul>
                       </div>
-  
+
                       <div class="accion columna-datos">
                         <ul>
                           <li>
@@ -294,7 +215,7 @@
                           <li><p>15/04/2024</p></li>
                         </ul>
                       </div>
-  
+
                       <div class="compra columna-datos">
                         <ul>
                           <li><p>$1075</p></li>
@@ -304,7 +225,7 @@
                           <li><p>$1075</p></li>
                         </ul>
                       </div>
-  
+
                       <div class="venta columna-datos">
                         <ul>
                           <li><p>$1075</p></li>
@@ -314,7 +235,7 @@
                           <li><p>$1075</p></li>
                         </ul>
                       </div>
-  
+
                       <div class="accion columna-datos">
                         <ul>
                           <li>
@@ -349,7 +270,7 @@
                           <li><p>15/04/2024</p></li>
                         </ul>
                       </div>
-  
+
                       <div class="compra columna-datos">
                         <ul>
                           <li><p>$1075</p></li>
@@ -359,7 +280,7 @@
                           <li><p>$1075</p></li>
                         </ul>
                       </div>
-  
+
                       <div class="venta columna-datos">
                         <ul>
                           <li><p>$1075</p></li>
@@ -369,7 +290,7 @@
                           <li><p>$1075</p></li>
                         </ul>
                       </div>
-  
+
                       <div class="accion columna-datos">
                         <ul>
                           <li>
@@ -391,7 +312,6 @@
                       </div>
                     </div>
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -399,81 +319,8 @@
         </div>
       </main>
     </div>
-    <footer>
-      <div class="footer-container">
-        <div class="institucional-container item-footer">
-          <h3>INSTITUCIONAL</h3>
-          <ul class="lista-institucional">
-            <li class="lista-institucional-item">
-              <a href="">¿Quiénes Somos?</a>
-            </li>
-            <li class="lista-institucional-item">
-              <a href="">Socios Estratégicos</a>
-            </li>
-            <li class="lista-institucional-item">
-              <a href="">Trabaje con Nosotros</a>
-            </li>
-            <li class="lista-institucional-item"><a href="">Ayuda</a></li>
-          </ul>
-        </div>
-        <div class="accesos-container item-footer">
-          <h3>ACCESOS</h3>
-          <ul class="lista-accesos">
-            <li class="lista-accesos-item"><a href="index.html">Inicio</a></li>
-            <li class="lista-accesos-item">
-              <a href="Miarchivo.html">Mi Archivo</a>
-            </li>
-            <li class="lista-accesos-item">
-              <a href="informes.html">Informes</a>
-            </li>
-            <li class="lista-accesos-item">
-              <a href="contacto.html">Contáctenos</a>
-            </li>
-          </ul>
-        </div>
-        <div class="contacto-container item-footer">
-          <h3>CONTACTO</h3>
-          <ul class="lista-contacto">
-            <li class="lista-contacto-item">
-              Universidad Tecnológica Nacional
-            </li>
-            <li class="lista-contacto-item">
-              ZEBALLOS 1341 - S2000BQA - ROSARIO
-            </li>
-            <li class="lista-contacto-item">0341 - 4481871</li>
-            <li class="lista-contacto-item">
-              <a href="contacto.html">!Escríbanos!</a>
-            </li>
-          </ul>
-        </div>
-        <div class="desarrollado-container item-footer">
-          <h3>DESARROLLADO POR</h3>
-          <ul class="lista-desarrollo">
-            <li class="lista-desarrollo-item">
-              <a href="https://github.com/JensonMedina" target="_blank"
-                >Jenson Medina (53338)</a
-              >
-            </li>
-            <li class="lista-desarrollo-item">
-              <a href="https://github.com/MateoRegis" target="_blank"
-                >Mateo Regis (48963)</a
-              >
-            </li>
-            <li class="lista-desarrollo-item">
-              <a href="https://github.com/BrunoRubini" target="_blank"
-                >Bruno Rubini(53367)</a
-              >
-            </li>
-            <li class="lista-desarrollo-item">TUP06 - 2024</li>
-          </ul>
-        </div>
-      </div>
-      <div class="nombre-materia">
-        <span>Tup - Cátedra de Laboratorio de Computación 2 - Año 2024</span>
-      </div>
-    </footer>
-    <!-- <script src="js/common.js"></script> -->
-   
-    
+    <footer id="footer"></footer>
+    <script src="js/common.js"></script>
+    <script src="js/pages/informes.js"></script>
   </body>
 </html>
