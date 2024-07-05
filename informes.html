@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="css/pages/informes.css" />
     <link rel="shortcut icon" href="img/logo-1.jpg" type="image/x-icon" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   </head>
   <body>
     <header id="header"></header>
     <div class="page-container">
-      <main>
+      <main style="min-height: 100vh;">
         <div class="main">
           <section class="img-background-section">
             <div class="img-background" id="BackgroundDinamico">
@@ -173,12 +175,9 @@
                 </div>
               </div>
 
-              <div class="compartir-info">
-                <a href="#" id="link-compartir-info">
-                  <i class="fa-solid fa-envelope"></i> Compartir Información
-                </a>
-              </div>
-              <div id="modal" class="modal">
+              
+              <button id="link-compartir-info"><i class="fa-solid fa-envelope"></i> Compartir Información</button>
+              <!-- <div id="modal" class="modal">
                 <div class="modal-content">
                   <span class="close-button">&times;</span>
                   <h2>Compartir Información</h2>
@@ -193,7 +192,7 @@
                     </div>
                   </form>
                 </div>
-              </div>
+              </div> -->
 
               <div class="datos-moneda">
                 <div class="tabla-cotizaciones">
