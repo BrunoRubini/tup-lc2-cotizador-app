@@ -115,7 +115,7 @@ function eventoMenu() {
   const btnMnu = document.querySelector('#btnMnu');
   if (contador == 1) {
     menu.style.transform = 'translateX(-0%)';
-    contador = 0;
+    contador = 0; 
     btnMnu.innerHTML = 'x';
   } else {
     menu.style.transform = 'translateX(-120%)';

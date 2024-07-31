@@ -30,7 +30,7 @@ function actualizarIconoConRegistrosPrevios(data, moneda, icono) {
       item.casa === moneda.casa &&
       new Date(item.fechaActualizacion) < new Date(moneda.fechaActualizacion)
   );
-
+  
   if (dataPrevia.length > 0) {
     let ultimoRegistro = dataPrevia[dataPrevia.length - 1];
     if (moneda.compra > ultimoRegistro.compra) {
@@ -46,39 +46,14 @@ function actualizarIconoConRegistrosPrevios(data, moneda, icono) {
   }
 }
 
-// Actualizar icono con registros nuevos
-function actualizarIconoConRegistrosNuevos(data, moneda, icono) {
-  const dataOrdenada = data.sort(
-    (a, b) => new Date(a.fechaActualizacion) - new Date(b.fechaActualizacion)
-  );
-
-  let datanueva = dataOrdenada.filter(
-    (item) =>
-      item.moneda === moneda.moneda &&
-      item.casa === moneda.casa &&
-      new Date(item.fechaActualizacion) > new Date(moneda.fechaActualizacion)
-  );
-
-  if (datanueva.length > 0) {
-    let primerRegistro = datanueva[0];
-    if (moneda.compra > primerRegistro.compra) {
-      icono.className = "fa-solid fa-arrow-up";
-    } else if (moneda.compra < primerRegistro.compra) {
-      icono.className = "fa-solid fa-arrow-down";
-    } else {
-      icono.className = "fa-solid fa-minus";
-    }
-  }
-}
-
 // Mostrar gráfico
 function MostrarGrafico(selectedOption) {
   selectedOption = parseInt(selectedOption);
   let cotizaciones = JSON.parse(localStorage.getItem("cotizaciones")) || [];
   let rutaImagen;
   let rutaImagenUsd = "usd.svg";
-
   let datosFiltrados = cotizaciones.filter((item) => {
+    
     switch (selectedOption) {
       case 0:
         rutaImagen = "noun-world-2699516.svg";
@@ -258,7 +233,7 @@ function dibujarGrafico(cotizaciones, selectedOption) {
     const letters = "0123456789ABCDEF"; // Caracteres hexadecimales
     let color = "#"; // Comienza con #
     for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)]; // Añade 6 caracteres aleatorios
+      color += letters[Math.floor(Math.random() * 16)]; // Añade 6 caracteres aleatorios y multiplica x la cantidad de caracteres de letters, math.ramdon genera numero entre 0 y 1;
     }
     return color; // Devuelve el color generado
   }

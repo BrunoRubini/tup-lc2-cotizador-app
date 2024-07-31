@@ -25,10 +25,12 @@ function ValidarFormulario() {
   return false;
 }
 
+/* esta función se encarga de configurar un event listener para el formulario de contacto,
+validar los campos del formulario, 
+enviar el formulario utilizando EmailJS y mostrar un mensaje de exito o error utilizando sweetalert
+*/ 
 window.onload = function () {
-  document
-    .getElementById("contact-form")
-    .addEventListener("submit", function (event) {
+  document.getElementById("contact-form").addEventListener("submit", function (event) {
       event.preventDefault();
       if (ValidarFormulario()) {
         emailjs.sendForm("contact_service", "contact_form", this).then(

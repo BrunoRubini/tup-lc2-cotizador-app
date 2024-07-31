@@ -23,7 +23,7 @@ const selectorDesplegable = document.getElementById("selector-container");
 const nombreBandera = document.getElementById("nombre-bandera");
 
 //en HTMLResponse me traigo el contenedor donde voy a ir agregando las tarjetas
-const HTMLResponse = document.getElementById("monedas-container");
+const HTMLResponse = document.getElementById("monedas-container"); 
 
 const nombreBanderaFlagImg = nombreBandera.querySelector(".flag img");
 
@@ -43,7 +43,6 @@ let opcionesMonedas;
 
 //en moneda seleccionada me voy a guardar el tipo de divisa selccionada por un usuario
 let monedaSeleccionada;
-
 
 //esta lista la voy a usar para almacenar las cotizaciones guardadas por un usuario
 let listaCotizacionesGuardadas = [];
@@ -78,7 +77,6 @@ btnSelectorMoneda.addEventListener("click", function () {
     selectorDesplegable.style.display = "flex";
     //ahora que se desplego el selector aprovecho para guardarme todas las opciones de monedas
     opcionesMonedas = document.querySelectorAll(".selector-option-container");
-
     //como esto me devuelve una lista de nodos, tengo que recorrer nodo por nodo, le agrego un evento click y me guardo el valor del atributo data currency del div clickeado
     opcionesMonedas.forEach((opcion) => {
       opcion.addEventListener("click", function () {
@@ -194,10 +192,7 @@ function MostrarTarjetas(selectedOption) {
     case 5:
     case 6:
     case 7:
-      HTMLResponse.innerHTML += construirTarjeta(
-        dolaresData[selectedOption - 1],
-        rutaImagen
-      );
+      HTMLResponse.innerHTML += construirTarjeta(dolaresData[selectedOption - 1],rutaImagen);
       nombreBanderaFlagImg.src = "img/" + rutaImagen;
       nombreBanderaNombre.textContent = dolaresData[selectedOption - 1].nombre;
       spanFechaHora.textContent = dolaresData[
@@ -290,10 +285,7 @@ function GuardarMoneda(boton) {
   }
 
   // finalmente guardo la lista en el localStorage
-  localStorage.setItem(
-    "cotizaciones",
-    JSON.stringify(listaCotizacionesGuardadas)
-  );
+  localStorage.setItem("cotizaciones",JSON.stringify(listaCotizacionesGuardadas));
 }
 
 // funcion que me va a servir para verificar si una moneda ya existe
